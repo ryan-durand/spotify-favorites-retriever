@@ -10,12 +10,12 @@ var client_id = 'f06f014b00f34551acaa274d18b0a15b'; // Your client id
 var client_secret = '76361f5a1c0340c68e33704c60c10702'; // Your secret
 var redirect_uri = 'https://spotify-favorites-retriever.herokuapp.com/callback'; // Your redirect uri
 
-var artistStringShort = "Top Artists (Past 4 Weeks): <br>";
-var artistStringMed = "Top Artists (Past 6 Months): <br>";
-var artistStringLong = "Top Artists (Past several years): <br>";
-var trackStringShort = "Top Tracks (Past 4 Weeks): <br>";
-var trackStringMed = "Top Tracks (Past 6 Months): <br>";
-var trackStringLong = "Top Tracks (Past several years): <br>";
+var artistStringShort = "";
+var artistStringMed = "";
+var artistStringLong = "";
+var trackStringShort = "";
+var trackStringMed = "";
+var trackStringLong = "";
 var artists = "";
 var tracks = "";
 var aristIMG = "";
@@ -149,6 +149,12 @@ app.get('/callback', function(req, res) {
         };
 
         request.get(topTracksShort, function(error, response, body) {
+          artistStringShort = "Top Artists (Past 4 Weeks): <br>";
+          artistStringMed = "Top Artists (Past 6 Months): <br>";
+          artistStringLong = "Top Artists (Past several years): <br>";
+          trackStringShort = "Top Tracks (Past 4 Weeks): <br>";
+          trackStringMed = "Top Tracks (Past 6 Months): <br>";
+          trackStringLong = "Top Tracks (Past several years): <br>";
           for (var i = 0; i < 20; i++) {
             tracks = body.items[i].name;
             trackStringShort = trackStringShort.concat(i + 1 + ". " + tracks + "<br>");
