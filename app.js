@@ -149,12 +149,12 @@ app.get('/callback', function(req, res) {
         };
 
         request.get(topTracksShort, function(error, response, body) {
-          artistStringShort = "Top Artists (Past 4 Weeks): <br>";
-          artistStringMed = "Top Artists (Past 6 Months): <br>";
-          artistStringLong = "Top Artists (Past several years): <br>";
-          trackStringShort = "Top Tracks (Past 4 Weeks): <br>";
-          trackStringMed = "Top Tracks (Past 6 Months): <br>";
-          trackStringLong = "Top Tracks (Past several years): <br>";
+          artistStringShort = "<h1>Top Artists (Past 4 Weeks):</h1> <br>";
+          artistStringMed = "<h1>Top Artists (Past 6 Months):</h1> <br>";
+          artistStringLong = "<h1>Top Artists (Past several years):</h1> <br>";
+          trackStringShort = "</h1>Top Tracks (Past 4 Weeks):</h1> <br>";
+          trackStringMed = "</h1>Top Tracks (Past 6 Months):</h1> <br>";
+          trackStringLong = "<h1>Top Tracks (Past several years):</h1> <br>";
           for (var i = 0; i < 20; i++) {
             tracks = body.items[i].name;
             trackStringShort = trackStringShort.concat(i + 1 + ". " + tracks + "<br>");

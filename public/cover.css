@@ -1,19 +1,7 @@
 /*
-* fontface
-*/
-@font-face {
-  font-family: "Circular Std Black";
-  src: url("//db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot");
-  src: url("//db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot?#iefix") format("embedded-opentype"),
-  url("//db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff2") format("woff2"),
-  url("//db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff") format("woff"),
-  url("//db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.ttf") format("truetype"),
-  url("//db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.svg#Circular Std Black") format("svg");
-}
-
-/*
  * Globals
  */
+
 /* Links */
 a,
 a:focus,
@@ -25,16 +13,17 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #fff;
-  text-shadow: none;
-  /* Prevent inheritance from `body` */
-  background-color: #1DB954;
-  font-family: "Circluar Std Black", Helvetica;
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
 }
+
 
 /*
  * Base structure
  */
+
 html,
 body {
   height: 100%;
@@ -56,6 +45,7 @@ body {
 .cover-container {
   max-width: 42em;
 }
+
 
 /*
  * Header
@@ -81,7 +71,7 @@ body {
   border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.nav-masthead .nav-link+.nav-link {
+.nav-masthead .nav-link + .nav-link {
   margin-left: 1rem;
 }
 
@@ -94,11 +84,11 @@ body {
   .masthead-brand {
     float: left;
   }
-
   .nav-masthead {
     float: right;
   }
 }
+
 
 /*
  * Cover
@@ -106,11 +96,11 @@ body {
 .cover {
   padding: 0 1.5rem;
 }
-
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
+
 
 /*
  * Footer
