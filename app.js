@@ -6,8 +6,8 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = 'f06f014b00f34551acaa274d18b0a15b'; // Your client id
-var client_secret = '76361f5a1c0340c68e33704c60c10702'; // Your secret
+var client_id = ''; // Your client id
+var client_secret = ''; // Your secret
 var redirect_uri = 'https://spotify-favorites-retriever.herokuapp.com/callback'; // Your redirect uri
 
 var artistStringShort = "";
